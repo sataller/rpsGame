@@ -127,10 +127,11 @@ public class RockPaperScissorsGame {
         String userChoice = choseThereParams(userNumber, gameNumber);
 
 
-        while (userChoice.length() > 8) {
+        while (userChoice.length() > 9) {
             System.out.println(userChoice);
             showMenu(gameNumber);
             userNumber = getUserChoice(scanner);
+            userChoice = choseThereParams(userNumber, gameNumber);
         }
         if (userNumber == 0) {
             System.out.println("Exit");
@@ -145,3 +146,4 @@ public class RockPaperScissorsGame {
     }
 }
 
+// java -jar "D:\s\done\task3\out\artifacts\task3_jar\task3.jar" rock paper scissors lizard Spock
