@@ -90,27 +90,6 @@ public class RockPaperScissorsGame {
         return Hex.encodeHexString(hmacSha512(key, valueToDigest));
     }
 
-    public static int initialization(String[] args) {
-        int gameNumber = 0;
-        String arg1 = args[0].toLowerCase();
-        String arg2 = args[1].toLowerCase();
-        String arg3 = args[2].toLowerCase();
-        if (args.length == 3 && arg1 == "rock" &&
-                arg2 == "paper" &&
-                arg3 == "scissors") {
-            gameNumber = 3;
-        }
-
-        if (args.length == 5 && args[0].toLowerCase() == "rock" &&
-                args[1].toLowerCase() == "paper" &&
-                args[2].toLowerCase() == "scissors" &&
-                args[3].toLowerCase() == "lizard" &&
-                args[4].toLowerCase() == "spock") {
-            gameNumber = 5;
-        }
-        return gameNumber;
-    }
-
     public static void main(String[] args) {
 
         int gameNumber = 0;
@@ -127,14 +106,14 @@ public class RockPaperScissorsGame {
             gameNumber = 5;
         }
 
-        Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-
         if (gameNumber == 0) {
             System.out.println("Incorrect arguments! ");
             System.out.println("Possible: rock, paper, scissors or rock, paper, scissors, lizard, Spock");
             return;
         }
+
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
 
         int botNumber = generateBotRandom(random);
         String botChoice = choseThereParams(botNumber, gameNumber);
