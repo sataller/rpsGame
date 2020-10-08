@@ -145,5 +145,3 @@ public class RockPaperScissorsGame {
         }
     }
 }
-
-// java -jar "D:\s\done\task3\out\artifacts\task3_jar\task3.jar" rock paper scissors lizard Spock
